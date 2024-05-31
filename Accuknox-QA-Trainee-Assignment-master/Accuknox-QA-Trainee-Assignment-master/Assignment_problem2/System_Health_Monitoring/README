@@ -1,0 +1,35 @@
+## System_Health_Monitoring
+
+## contains
+- Monitoring.py : Contains script that continuously monitors the health of the system by checking various metrics such as CPU usage, memory usage, disk space, and running processes. If any of these metrics exceed predefined thresholds, the script prints an alert message.
+
+## Requirements
+
+- Python 3.x
+- psutil library
+
+## Installation
+
+1. Ensure Python is installed on your system. 
+2. Install the psutil library by running the following command: pip install pustil
+
+## Usage
+
+1. Save the provided script as 'system_health_monitor.py' in your desired directory.
+2. Open a terminal or command prompt.
+3. Navigate to the directory containing the 'system_health_monitor.py' script.
+4. Run the script using the following command: python Monitoring.py
+
+## Thresholds
+
+- CPU_THRESHOLD: 80
+- MEMORY_THRESHOLD: 80
+- DISK_THRESHOLD: 80
+- PROCESS_THRESHOLD: 80
+
+## Alerts
+
+- If CPU usage exceeds the CPU_THRESHOLD, an alert message is printed.
+- If memory usage exceeds the MEMORY_THRESHOLD, an alert message is printed.
+- If disk usage exceeds the DISK_THRESHOLD, an alert message is printed.
+- If the number of running processes exceeds the PROCESS_THRESHOLD, an alert message is printed.

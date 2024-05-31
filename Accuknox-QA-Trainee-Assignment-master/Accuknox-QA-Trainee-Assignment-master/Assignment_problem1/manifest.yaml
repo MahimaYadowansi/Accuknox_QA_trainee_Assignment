@@ -1,0 +1,19 @@
+apiVersion: apps/v1 # Kubernetes API version for deployments
+kind: Deployment # Kind of object being created
+metadata:
+  name: cow-say-app # Unique name for the deployment
+spec:
+  replicas: 1 # Number of pod replicas to run
+  selector:
+    matchLabels: # Selector for pods to manage
+      app: cow-say-app
+  template: # Pod template for deployment
+    metadata:
+      labels: # Labels for the pod
+        app: cow-say-app
+    spec:
+      containers: # Container definition within the pod
+      - name: cow-say-app # Name for the container
+        image: username/cow-application:latest # please replace user name here
+        ports: # Ports exposed by the container
+        - containerPort: 4499

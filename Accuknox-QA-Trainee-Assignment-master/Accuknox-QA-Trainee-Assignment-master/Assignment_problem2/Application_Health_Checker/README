@@ -1,0 +1,32 @@
+## Application_Health_Checker
+This folder contains scripts and resources related to the Application Health Checker project.
+
+The Application Health Checker is a Python-based tool designed to monitor the health of applications. It provides functionalities to check the status of an application, including response time, HTTP status codes, and more.
+
+## Contents
+- App.py : Contains Flask application provides a simple health check endpoint that returns "ok" with a status code of 200.
+
+- Monitoring.py : Contains script  that continuously monitors the health of a server by sending HTTP GET requests to a specified URL and checking the response status code. If the server is running properly and returns a status code of 200, the script prints "up"; otherwise, it prints "down".
+
+## Requirements
+
+- Python 3.x
+- Flask library 
+- requests library 
+- time library 
+
+## Installation
+
+1. Ensure Python is installed on your system. 
+2. Install the Flask library by running the following command: pip install Flask
+3. Install the requests library by running the following command: pip install requests
+4. Install the time library by running the following command: pip install time
+
+## usage
+- save 'App.py' and 'Monitoring.py'
+- Open two terminal or command prompt.
+- In one terminal navigate to the directory containing the 'App.py' script, and run it with command: python App.py
+-In another terminal navigate to the directory containing the 'Monitoring.py' script, and run it with command: python Monitoring.py
+- Check response in both terminal.
+
+

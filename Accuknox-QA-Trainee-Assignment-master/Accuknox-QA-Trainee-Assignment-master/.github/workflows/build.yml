@@ -1,0 +1,26 @@
+name: Build and Push Docker Image
+
+on:
+  push:
+    branches: [ main ] 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # You can choose a different runner
+
+    steps:
+      - uses: actions/checkout@v3  # Checkout code from repository
+
+      - name: Login to Docker Hub (optional)
+        uses: docker/login-action@v3
+        with:
+          username: username #replace username
+          password: password #replace password
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          push: true
+          tags: username/cow-application:latest  # Replace with your username
+          cache: pull  # Optional: Cache Docker layers for faster builds
+
